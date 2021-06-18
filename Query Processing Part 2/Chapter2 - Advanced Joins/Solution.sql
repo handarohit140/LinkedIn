@@ -133,3 +133,18 @@ ORDER BY 	A1.Species,
 /_/ /_/ /_/_____/  /_____/_/ |_/_____/  
                                         
 */
+
+
+Hi,
+Was just curious if Name and Species are used to identify every animal and we have compared that one of the animal in join should be a male and other should be a female, so why is the name comparison required. As no two animals can have same name and same species as per DB.
+
+SELECT A1.Species, A1.Breed, A1.Name, A2.Name 
+FROM ANIMALS A1
+inner join ANIMALS A2
+ON A1.Gender='M' and A2.GENDER='F'
+AND A1.Species = A2.Species and A1.Breed = A2.Breed
+order by A1.Species, A1.Breed
+
+Not sure, if I understood it correctly but just wanted to know when the above code may fail as it gives the same set of records.
+
+Thanks!
